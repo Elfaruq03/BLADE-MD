@@ -159,7 +159,7 @@ cmd({
         category: "group",
         filename: __filename,
     },
-    async(Void, citel, text,{ isCreator }) => {
+    async(Void, citel, text) => {
         if (!citel.isGroup) return citel.reply(tlang().group);
         const groupMetadata = citel.isGroup ? await Void.groupMetadata(citel.chat).catch((e) => {}) : "";
         const participants = citel.isGroup ? await groupMetadata.participants : "";
